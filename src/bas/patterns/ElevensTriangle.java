@@ -9,6 +9,7 @@ public class ElevensTriangle {
         // where n = row number and k = column number
         Scanner scn = new Scanner(System.in);
         int numRows = scn.nextInt();
+        scn.close();
 
         for (int row = 0; row < numRows; row++) {
             int rowCcol = 1;

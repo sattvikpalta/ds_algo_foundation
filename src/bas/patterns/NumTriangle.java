@@ -6,6 +6,7 @@ public class NumTriangle {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int numRows = scn.nextInt();
+        scn.close();
 
         int val = 1;
         for (int row = 1; row <= numRows; row++) {

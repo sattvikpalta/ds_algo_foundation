@@ -8,6 +8,8 @@ public class DecToAny {
         int n = scn.nextInt();
         int b = scn.nextInt();
         int dn = getValueInBase(n, b);
+        scn.close();
+
         System.out.println(dn);
     }
 

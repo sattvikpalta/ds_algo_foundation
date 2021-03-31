@@ -7,6 +7,7 @@ public class NPrime {
         Scanner scn = new Scanner(System.in);
         int lo = scn.nextInt();
         int hi = scn.nextInt();
+        scn.close();
 
         while (lo <= hi) {
             int count = 0;

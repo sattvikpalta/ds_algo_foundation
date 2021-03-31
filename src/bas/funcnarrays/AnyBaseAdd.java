@@ -9,6 +9,7 @@ public class AnyBaseAdd {
         int b = scn.nextInt();
         int n1 = scn.nextInt();
         int n2 = scn.nextInt();
+        scn.close();
 
         int d = getSum(b, n1, n2);
         System.out.println(d);

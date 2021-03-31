@@ -7,6 +7,7 @@ public class RotNum {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int k = scn.nextInt();
+        scn.close();
 
         int temp = n;
         int count = 0;

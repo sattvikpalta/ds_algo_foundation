@@ -8,6 +8,7 @@ public class PyTriplet {
         int a = scn.nextInt();
         int b = scn.nextInt();
         int c = scn.nextInt();
+        scn.close();
 
         if (a * a == b * b + c * c) {
             System.out.println("true");

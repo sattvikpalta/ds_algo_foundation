@@ -8,6 +8,7 @@ public class DigitFreq {
         int n = scn.nextInt();
         int d = scn.nextInt();
         int f = getDigitFrequency(n, d);
+        scn.close();
 
         System.out.println(f);
     }

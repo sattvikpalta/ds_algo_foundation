@@ -8,6 +8,8 @@ public class AnyToDec {
         int n = scn.nextInt();
         int b = scn.nextInt();
         int d = getValueIndecimal(n, b);
+        scn.close();
+
         System.out.println(d);
     }
 

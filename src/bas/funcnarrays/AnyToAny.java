@@ -8,6 +8,7 @@ public class AnyToAny {
         int n = scn.nextInt();
         int sourceBase = scn.nextInt();
         int destBase = scn.nextInt();
+        scn.close();
 
         int decNum = anyToDec(n, sourceBase);
         System.out.println(decToAny(decNum, destBase));

@@ -7,6 +7,7 @@ public class GcdLcm {
         Scanner scn = new Scanner(System.in);
         int n1 = scn.nextInt();
         int n2 = scn.nextInt();
+        scn.close();
 
         int temp1 = n1;
         int temp2 = n2;

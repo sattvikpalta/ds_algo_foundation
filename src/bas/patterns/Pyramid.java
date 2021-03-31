@@ -6,6 +6,7 @@ public class Pyramid {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int numRows = scn.nextInt();
+        scn.close();
 
         int csp = numRows - 1;
         int cst = 1;
