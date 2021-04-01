@@ -2,7 +2,7 @@ package bas.funcnarrays;
 
 import java.util.Scanner;
 
-public class ArrayDiff {
+public class SubArrays {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n1 = scn.nextInt();
@@ -19,38 +19,50 @@ public class ArrayDiff {
             two[i] = scn.nextInt();
         }
 
+        scn.close();
+
         diff(one, two);
 
     }
 
     public static void diff(int[] one, int[] two) {
+        // Given: array 2 > array 1
         int rv[] = new int[two.length];
         int borrow = 0;
 
-        for (int i = 1; i <= one.length; i++) {
-            int digit = two[two.length - i] - one[one.length - i] - borrow;
+        int i = one.length - 1;
+        int j = two.length - 1;
+        int k = rv.length - 1;
+
+        while (k >= 0) {
+            int digit = two[j] - borrow;
+            if (i >= 0) {
+                digit -= one[i];
+            }
 
             if (digit < 0) {
-                borrow = 1;
                 digit += 10;
+                borrow = 1;
             } else {
                 borrow = 0;
             }
 
-            rv[rv.length - i] = digit;
+            rv[k] = digit;
+            i--;
+            j--;
+            k--;
         }
 
-        int index = 0;
-        for (int i = 0; i < rv.length; i++) {
-            if (rv[i] == 0) {
-                index++;
-            } else {
+        int idx = 0;
+        for (k = 0; k < rv.length; k++) {
+            if (rv[k] > 0) {
+                idx = k;
                 break;
             }
         }
 
-        for (int i = index; i < rv.length; i++) {
-            System.out.print(rv[i] + " ");
+        for (k = idx; k < rv.length; k++) {
+            System.out.println(rv[k]);
         }
 
     }
