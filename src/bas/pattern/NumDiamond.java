@@ -1,4 +1,4 @@
-package bas.patterns;
+package bas.pattern;
 
 import java.util.Scanner;
 

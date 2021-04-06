@@ -1,4 +1,4 @@
-package bas.twodarrays;
+package bas.twodarray;
 
 import java.util.Scanner;
 
