@@ -1,4 +1,4 @@
-package bas.getstart;
+package bas.getstarted;
 
 import java.util.Scanner;
 
