@@ -1,40 +1,40 @@
-package bas.pattern;
+package bas.patterns;
 
 import java.util.Scanner;
 
-public class HollowDiamond {
+public class Rhombus {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int numRows = scn.nextInt();
         scn.close();
 
-        int csp = 1;
-        int cst = numRows / 2 + 1;
+        int outSpace = numRows / 2;
+        int inSpace = -1;
 
         for (int row = 1; row <= numRows; row++) {
-            
-            for (int col = 1; col <= cst; col++) {
-                System.out.print("* ");
-            }
-
-            for (int col = 1; col <= csp; col++) {
+            for (int col = 1; col <= outSpace; col++) {
                 System.out.print("  ");
             }
 
-            for (int col = 1; col <= cst; col++) {
+            System.out.print("* ");
+
+            for (int col = 1; col <= inSpace; col++) {
+                System.out.print("  ");
+            }
+
+            if (row != 1 && row != numRows) {
                 System.out.print("* ");
             }
 
             if (row <= numRows / 2) {
-                csp+=2;
-                cst--;
+                outSpace--;
+                inSpace += 2;
             } else {
-                csp-=2;
-                cst++;
+                outSpace++;
+                inSpace -= 2;
             }
 
             System.out.println();
         }
     }
-
 }
