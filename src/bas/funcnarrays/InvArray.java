@@ -1,30 +1,28 @@
-package bas.funcnarray;
+package bas.funcnarrays;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class RevArray {
+public class InvArray {
     public static void display(int[] a) {
         StringBuilder sb = new StringBuilder();
 
         for (int val : a) {
-            sb.append(val + " ");
+            sb.append(val + "\n");
         }
+        
         System.out.println(sb);
     }
 
-    public static void reverse(int[] a) {
-        int i = 0;
-        int j = a.length - 1;
+    public static int[] inverse(int[] a) {
+        int[] rv = new int[a.length];
 
-        while (i < j) {
-            int temp = a[i];
-            a[i] = a[j];
-            a[j] = temp;
-
-            i++;
-            j--;
+        for (int i = 0; i < a.length; i++) {
+            int val = a[i];
+            rv[val] = i;
         }
+
+        return rv;
     }
 
     public static void main(String[] args) throws Exception {
@@ -36,8 +34,8 @@ public class RevArray {
             a[i] = Integer.parseInt(br.readLine());
         }
 
-        reverse(a);
-        display(a);
+        int[] inv = inverse(a);
+        display(inv);
     }
 
 }

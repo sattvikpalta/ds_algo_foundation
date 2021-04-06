@@ -1,4 +1,4 @@
-package bas.funcnarray;
+package bas.funcnarrays;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

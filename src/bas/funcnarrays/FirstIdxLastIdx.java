@@ -1,8 +1,8 @@
-package bas.funcnarray;
+package bas.funcnarrays;
 
 import java.util.Scanner;
 
-public class BrokenEconomy {
+public class FirstIdxLastIdx {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
@@ -17,26 +17,42 @@ public class BrokenEconomy {
 
         int lo = 0;
         int hi = a.length - 1;
-        int floor = Integer.MIN_VALUE;
-        int ceil = Integer.MAX_VALUE;
+        int firstIdx = 0;
 
         while (lo <= hi) {
             int mid = (lo + hi) / 2;
+
             if (data > a[mid]) {
                 lo = mid + 1;
-                floor = a[mid];
             } else if (data < a[mid]) {
                 hi = mid - 1;
-                ceil = a[mid];
             } else {
-                ceil = a[mid];
-                floor = a[mid];
-                break;
+                firstIdx = mid;
+                hi = mid - 1;
             }
         }
 
-        System.out.println(ceil);
-        System.out.println(floor);
+        System.out.println(firstIdx);
+
+        lo = 0;
+        hi = a.length - 1;
+        int lastIdx = 0;
+
+        while (lo <= hi) {
+            int mid = (lo + hi) / 2;
+
+            if (data > a[mid]) {
+                lo = mid + 1;
+            } else if (data < a[mid]) {
+                hi = mid - 1;
+            } else {
+                lastIdx = mid;
+                lo = mid + 1;
+            }
+        }
+
+        System.out.println(lastIdx);
+
     }
 
 }
