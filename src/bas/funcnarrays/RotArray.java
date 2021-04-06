@@ -36,7 +36,7 @@ public class RotArray {
 
     }
 
-    public static int[] reverse(int[] a, int start, int end) {
+    public static void reverse(int[] a, int start, int end) {
         while (start < end) {
             int temp = a[start];
             a[start] = a[end];
@@ -46,7 +46,6 @@ public class RotArray {
             end--;
         }
 
-        return a;
     }
 
     public static void main(String[] args) throws Exception {
