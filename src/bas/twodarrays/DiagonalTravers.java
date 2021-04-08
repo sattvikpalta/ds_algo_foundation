@@ -2,7 +2,7 @@ package bas.twodarrays;
 
 import java.util.Scanner;
 
-public class DiagonalTraversal {
+public class DiagonalTravers {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
