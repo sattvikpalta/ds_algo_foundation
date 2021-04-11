@@ -16,9 +16,7 @@ public class Factorial {
             return 1;
         }
 
-        int fact = n;
-        fact *= factorial(n - 1);
-        return fact;
+        return n * factorial(n - 1);
     }
 
 }
