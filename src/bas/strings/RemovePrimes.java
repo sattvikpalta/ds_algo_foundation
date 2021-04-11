@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class RemovePrimes {
     public static void solution(ArrayList<Integer> al) {
         for (int i = al.size() - 1; i >= 0; i--) {
-            if (isPrime(al.get(i))) {
+            if(isPrime(al.get(i))){
                 al.remove(i);
             }
         }
