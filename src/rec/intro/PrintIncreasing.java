@@ -1,4 +1,4 @@
-package bas.recursion;
+package rec.intro;
 
 import java.util.Scanner;
 
