@@ -22,10 +22,17 @@ public class FirstIndex {
             return -1;
         }
 
-        int fIdx = firstIndex(arr, idx + 1, x);
+        // Inferior method
+        /*
+         * int fIdx = firstIndex(arr, idx + 1, x); if (arr[idx] == x) { return idx; }
+         * else { return fIdx; }
+         */
+
+        // Superior method
         if (arr[idx] == x) {
             return idx;
         } else {
+            int fIdx = firstIndex(arr, idx + 1, x);
             return fIdx;
         }
     }
