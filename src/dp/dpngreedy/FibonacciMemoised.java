@@ -17,7 +17,6 @@ public class FibonacciMemoised {
         long t2 = System.currentTimeMillis();
         System.out.println(fibonacciMemoised(n, new int[n + 1]));
         System.out.println(System.currentTimeMillis() - t2);
-
     }
 
     public static int fibonacci(int n) {
@@ -42,4 +41,5 @@ public class FibonacciMemoised {
 
         return fn;
     }
+
 }
