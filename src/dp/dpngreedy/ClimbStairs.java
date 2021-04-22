@@ -13,7 +13,7 @@ public class ClimbStairs {
 
     }
 
-    // Memoisation
+    // Memoization
     public static int countStairPaths(int n, int[] bank) {
         if (n == 0) {
             return 1;
