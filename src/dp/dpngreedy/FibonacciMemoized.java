@@ -2,7 +2,7 @@ package dp.dpngreedy;
 
 import java.util.Scanner;
 
-public class FibonacciMemoised {
+public class FibonacciMemoized {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
