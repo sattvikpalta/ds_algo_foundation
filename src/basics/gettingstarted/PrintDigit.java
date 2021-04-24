@@ -3,6 +3,8 @@ package basics.gettingstarted;
 import java.util.Scanner;
 
 public class PrintDigit {
+    // Program to print digits of a number
+    
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
