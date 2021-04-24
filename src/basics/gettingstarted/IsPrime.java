@@ -2,8 +2,9 @@ package basics.gettingstarted;
 
 import java.util.Scanner;
 
-//Program to check if a number is prime or not
 public class IsPrime {
+    // Program to check if a number is prime or not
+    
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         // Total numbers to be checked

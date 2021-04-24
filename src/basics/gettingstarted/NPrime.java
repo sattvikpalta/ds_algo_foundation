@@ -2,10 +2,13 @@ package basics.gettingstarted;
 
 import java.util.Scanner;
 
+// Program to display prime numbers between 2 numbers
 public class NPrime {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
+        // First number
         int lo = scn.nextInt();
+        // Second number
         int hi = scn.nextInt();
         scn.close();
 
