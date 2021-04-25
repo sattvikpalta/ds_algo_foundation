@@ -13,7 +13,7 @@ public class PyTriplet {
         int c = scn.nextInt(); // 3
         scn.close();
 
-        if (a * a == b * b + c * c) { //
+        if (a * a == b * b + c * c) { 
             System.out.println("true");
         } else if (b * b == a * a + c * c) { // 5 x 5 = 4 x 4 + 3 x 3
             System.out.println("true");
