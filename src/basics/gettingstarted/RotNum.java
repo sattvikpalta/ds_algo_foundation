@@ -3,6 +3,8 @@ package basics.gettingstarted;
 import java.util.Scanner;
 
 public class RotNum {
+    //Program to rotate a number
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
