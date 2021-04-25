@@ -13,7 +13,7 @@ public class RotNum {
         int k = scn.nextInt();
         scn.close();
 
-        // Make a copy to not disturb original number
+        // Copy to not disturb original number
         int temp = n;
         // Variable 'count' to calculate total digits
         int count = 0;
