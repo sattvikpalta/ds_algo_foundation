@@ -13,18 +13,19 @@ public class GcdLcm {
         int n2 = scn.nextInt();
         scn.close();
 
-        //Make copies to not disturb
+        // Copies in 'temp1' and 'temp2' to not disturb the original numbers
         int temp1 = n1;
         int temp2 = n2;
 
+        // Loop to divide numbers till remainder != 0. Also handles cases where n1 < n2
         while (temp1 % temp2 != 0) {
-            int rem = temp1 % temp2;
-            temp1 = temp2;
-            temp2 = rem;
+            int rem = temp1 % temp2; // rem = 24 % 48 = 24
+            temp1 = temp2; // temp1 = 48
+            temp2 = rem; // temp2 = 24
         }
 
         System.out.println(temp2);
-        System.out.println((n1 * n2) / temp2);
+        System.out.println((n1 * n2) / temp2); // LCM x GCD = n1 x n2
     }
 
 }
