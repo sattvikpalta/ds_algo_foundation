@@ -22,20 +22,20 @@ public class PrintDigits {
             count++;
         }
 
-        // Use 'div' as divisor, which is 10 to the power of count - 1 (div = 10^3)
+        // Variable 'div' as divisor, which is 10 to the power of count - 1 (div = 10 ^ 3)
         int div = (int) Math.pow(10, count - 1);
 
         while (div != 0) {
-            // Divide by 10 to remove digits
+            // Divides by 10 to remove digits
             int q = n / div; // q = 7
 
-            // Print digit after removing
+            // Prints digit after removing
             System.out.println(q);
 
-            // Make 'n' as remainder of 'n' and 'div'
+            // Makes 'n' remainder of 'n' and 'div'
             n %= div; // n = 654
 
-            // Divide 'div' by 10
+            // Divides 'div' by 10
             div /= 10; // div = 10 ^ 2
         }
 
