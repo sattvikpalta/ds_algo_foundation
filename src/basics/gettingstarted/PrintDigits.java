@@ -2,7 +2,7 @@ package basics.gettingstarted;
 
 import java.util.Scanner;
 
-public class PrintDigit {
+public class PrintDigits {
     // Program to print digits of a number
 
     public static void main(String[] args) {
