@@ -19,8 +19,10 @@ public class InvNum {
         while (n != 0) {
             // Calculate remainder as 'rem'
             int rem = n % 10;
+
             // iPlace => Place for 'i'
             int iPlace = i * (int) Math.pow(10, rem - 1); // iPlace = 1 x 10 ^ (4 - 1)
+            
             // Add 'i' in 'inv' at the correct place
             inv += iPlace; // inv = 1000, i.e 1 is at the 4th place
             // Remove the placed digit by dividing 'n' by 10
