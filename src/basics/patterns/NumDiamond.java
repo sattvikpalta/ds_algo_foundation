@@ -3,6 +3,8 @@ package basics.patterns;
 import java.util.Scanner;
 
 public class NumDiamond {
+    // Program to print a diamond of numbers
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int numRows = scn.nextInt();
@@ -21,7 +23,7 @@ public class NumDiamond {
             for (int col = 1; col <= cst; col++) {
                 System.out.print(cval + " ");
 
-                if (col <= cst/2) {
+                if (col <= cst / 2) {
                     cval++;
                 } else {
                     cval--;
