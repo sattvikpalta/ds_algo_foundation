@@ -3,7 +3,7 @@ package basics.patterns;
 import java.util.Scanner;
 
 public class InvTriangle {
-    // Program to print an inverted triangle using stars
+    // Program to print an inverted right triangle using stars
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
