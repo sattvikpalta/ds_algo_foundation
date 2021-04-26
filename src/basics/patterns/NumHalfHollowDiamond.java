@@ -2,7 +2,8 @@ package basics.patterns;
 
 import java.util.Scanner;
 
-public class NumHalfDiamond {
+public class NumHalfHollowDiamond {
+    // Program to print a half hollow diamond of numbers
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int numRows = scn.nextInt();
