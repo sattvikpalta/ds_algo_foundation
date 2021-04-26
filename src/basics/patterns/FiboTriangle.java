@@ -3,6 +3,8 @@ package basics.patterns;
 import java.util.Scanner;
 
 public class FiboTriangle {
+    // Program to print a right triangle of Fibonacci numbers
+    
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int numRows = scn.nextInt();
