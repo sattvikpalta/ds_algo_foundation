@@ -3,6 +3,8 @@ package basics.patterns;
 import java.util.Scanner;
 
 public class HourGlass {
+    // Program to print an hour glass pattern (top empty)
+    
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int numRows = scn.nextInt();
