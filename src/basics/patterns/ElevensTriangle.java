@@ -3,6 +3,8 @@ package basics.patterns;
 import java.util.Scanner;
 
 public class ElevensTriangle {
+    // Program to print a right triangle of elevens multiples
+
     public static void main(String[] args) {
         // Formula used
         // nC(k+1) = nCk * (n-k)/(k+1)
