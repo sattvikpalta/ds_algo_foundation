@@ -3,13 +3,7 @@ package basics.patterns;
 import java.util.Scanner;
 
 public class Diamond {
- /*    
-        *	
-    *	*	*	
-*	*	*	*	*	
-    *	*	*	
-		*	     
-*/
+    // Program to print a diamond pattern (number of rows must be odd)
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
