@@ -3,6 +3,8 @@ package basics.patterns;
 import java.util.Scanner;
 
 public class InvPyramid {
+    // Program to print an inverted pyramid
+    
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int numRows = scn.nextInt();
