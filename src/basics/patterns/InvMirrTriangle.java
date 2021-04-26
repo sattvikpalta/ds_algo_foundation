@@ -3,6 +3,8 @@ package basics.patterns;
 import java.util.Scanner;
 
 public class InvMirrTriangle {
+    // Program to print inverted mirror right triangle using stars
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int numRows = scn.nextInt();
