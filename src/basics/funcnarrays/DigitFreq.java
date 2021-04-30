@@ -3,10 +3,12 @@ package basics.funcnarrays;
 import java.util.Scanner;
 
 public class DigitFreq {
+    // Program to calculate a digits frequency in a number
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
-        int d = scn.nextInt();
+        int n = scn.nextInt(); // Number
+        int d = scn.nextInt(); // Digit to be searched
         int f = getDigitFrequency(n, d);
         scn.close();
 
