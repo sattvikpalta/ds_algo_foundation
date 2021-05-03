@@ -3,14 +3,18 @@ package basics.funcnarrays;
 import java.util.Scanner;
 
 public class AnyToAny {
+    // Program to convert a number from a source base to destination base
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
-        int sourceBase = scn.nextInt();
-        int destBase = scn.nextInt();
+        int n = scn.nextInt(); // Input: number (Example: 341)
+        int sourceBase = scn.nextInt(); // Input: source base (Example: 8)
+        int destBase = scn.nextInt(); // Input: destination base (Example: 2)
         scn.close();
 
+        // First, convert the number into a decimal number
         int decNum = anyToDec(n, sourceBase);
+        // Next, convert the decimal number into a number with required base
         System.out.println(decToAny(decNum, destBase));
     }
 
