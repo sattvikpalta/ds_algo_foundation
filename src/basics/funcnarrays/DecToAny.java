@@ -8,7 +8,7 @@ public class DecToAny {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt(); // Input: decimal number (Example: 855)
-        int b = scn.nextInt(); // Input: base to convert number into (Example: 2)
+        int b = scn.nextInt(); // Input: destination base (Example: 2)
         int dn = getValueInBase(n, b);
         scn.close();
 

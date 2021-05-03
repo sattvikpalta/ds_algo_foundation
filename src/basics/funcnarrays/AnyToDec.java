@@ -8,7 +8,7 @@ public class AnyToDec {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt(); // Input number (Example: 421)
-        int b = scn.nextInt(); // Input base of given number
+        int b = scn.nextInt(); //
         int d = getValueIndecimal(n, b);
         scn.close();
 
