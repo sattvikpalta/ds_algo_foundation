@@ -3,6 +3,8 @@ package basics.funcnarrays;
 import java.util.Scanner;
 
 public class AnyToDec {
+    // Program to convert a number from any base to decimal base
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
