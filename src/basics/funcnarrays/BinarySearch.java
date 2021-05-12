@@ -21,8 +21,8 @@ public class BinarySearch {
     }
 
     public static boolean binarySearch(int[] a, int data) {
-        int lo = 0; // start index
-        int hi = a.length - 1; // end index
+        int lo = 0; // starting index
+        int hi = a.length - 1; // ending index
 
         while (lo <= hi) {
             int mid = (lo + hi) / 2;
