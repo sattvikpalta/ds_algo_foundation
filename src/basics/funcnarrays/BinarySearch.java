@@ -3,6 +3,8 @@ package basics.funcnarrays;
 import java.util.Scanner;
 
 public class BinarySearch {
+    // Program to implement binary search
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
@@ -19,8 +21,8 @@ public class BinarySearch {
     }
 
     public static boolean binarySearch(int[] a, int data) {
-        int lo = 0;
-        int hi = a.length - 1;
+        int lo = 0; // start index
+        int hi = a.length - 1; // end index
 
         while (lo <= hi) {
             int mid = (lo + hi) / 2;
