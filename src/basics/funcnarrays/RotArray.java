@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class RotArray {
+    // Program to rotate an array
+
     public static void display(int[] a) {
         StringBuilder sb = new StringBuilder();
 
@@ -16,7 +18,9 @@ public class RotArray {
     public static void rotate(int[] a, int k) {
         // int i = 0;
 
+        // Handling large cases, for example, k = 21
         k %= a.length;
+        // Handling negative rotations
         if (k < 0) {
             k += a.length;
         }
@@ -30,9 +34,9 @@ public class RotArray {
          */
 
         // Method - 2
-        reverse(a, 0, a.length - k - 1);
-        reverse(a, a.length - k, a.length - 1);
-        reverse(a, 0, a.length - 1);
+        reverse(a, 0, a.length - k - 1); // Reverse first half of the array
+        reverse(a, a.length - k, a.length - 1); // Reverse second half of the array
+        reverse(a, 0, a.length - 1); // Reverse entire array
 
     }
 
