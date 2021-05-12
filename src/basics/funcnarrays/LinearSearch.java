@@ -2,7 +2,9 @@ package basics.funcnarrays;
 
 import java.util.Scanner;
 
-public class FindArrayElement {
+public class LinearSearch {
+    // Program to implement Linear Search
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
