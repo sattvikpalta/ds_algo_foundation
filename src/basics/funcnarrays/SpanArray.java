@@ -3,6 +3,9 @@ package basics.funcnarrays;
 import java.util.Scanner;
 
 public class SpanArray {
+    // Program to find span, i.e. difference of max element and min element of an
+    // array
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
