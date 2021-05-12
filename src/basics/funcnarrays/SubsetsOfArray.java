@@ -3,7 +3,7 @@ package basics.funcnarrays;
 import java.util.Scanner;
 
 public class SubsetsOfArray {
-    // Program to find all subsets of an array
+    // Program to find all subsets of an arr
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
