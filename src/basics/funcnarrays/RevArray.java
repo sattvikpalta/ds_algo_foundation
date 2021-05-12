@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class RevArray {
+    // Program to reverse an array
+
     public static void display(int[] a) {
         StringBuilder sb = new StringBuilder();
 
