@@ -3,6 +3,8 @@ package basics.funcnarrays;
 import java.util.Scanner;
 
 public class BrokenEconomy {
+    // Pepcoding level 1 problem - Broken Economy
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
