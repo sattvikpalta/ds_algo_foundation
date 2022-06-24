@@ -53,5 +53,6 @@ public class ArrayAddition {
 
         for (int num : sum)
             System.out.println(num);
+
     }
 }
