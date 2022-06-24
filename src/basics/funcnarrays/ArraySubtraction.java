@@ -3,18 +3,17 @@ package basics.funcnarrays;
 import java.util.Scanner;
 
 public class ArraySubtraction {
-    // Program to subtract 2 arrays
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        int n1 = scn.nextInt(); // Input (Example: n1 = 3)
+        int n1 = scn.nextInt();
         int[] one = new int[n1];
 
         for (int i = 0; i < one.length; i++) {
             one[i] = scn.nextInt();
         }
 
-        int n2 = scn.nextInt(); // Input (Example: n2 = 5)
+        int n2 = scn.nextInt();
         int[] two = new int[n2];
 
         for (int i = 0; i < two.length; i++) {
@@ -24,53 +23,47 @@ public class ArraySubtraction {
         scn.close();
 
         diff(one, two);
-
     }
 
     public static void diff(int[] one, int[] two) {
-        // Given: two > one
-        // one = {4, 8, 8}
-        // two = {3, 1, 5, 2, 4}
-        int rv[] = new int[two.length];
-        int borrow = 0;
+        int[] diff = new int[two.length];
 
-        int i = one.length - 1;
-        int j = two.length - 1;
-        int k = rv.length - 1;
+        int carry = 0;
+        int ptr1 = one.length - 1;
+        int ptr2 = two.length - 1;
+        int ptr3 = diff.length - 1;
 
-        while (k >= 0) {
-            int digit = two[j] - borrow; // digit = 4 - 0 = 4
-            if (i >= 0) {
-                digit -= one[i]; // digit = 4 - 8 = -4
-            }
+        while (ptr3 >= 0) {
+            int digit = 0;
+            int oneVal = ptr1 >= 0 ? one[ptr1] : 0;
 
-            if (digit < 0) {
-                digit += 10; // digit = -4 + 10 = 6
-                borrow = 1;
+            if (two[ptr2] + carry >= oneVal) {
+                digit = two[ptr2] + carry - oneVal;
+                carry = 0;
             } else {
-                borrow = 0;
+                digit = two[ptr2] + carry + 10 - oneVal;
+                carry = -1;
             }
 
-            rv[k] = digit;
-            i--;
-            j--;
-            k--;
+            diff[ptr3] = digit;
+
+            ptr1--;
+            ptr2--;
+            ptr3--;
+
         }
 
-        // To leave initial 0s in a number
-        // For example, rv = {0, 0, 0, 9}
         int idx = 0;
-        for (k = 0; k < rv.length; k++) {
-            if (rv[k] > 0) {
-                idx = k;
+        while (idx < diff.length) {
+            if (diff[idx] != 0)
                 break;
-            }
+            else
+                idx++;
         }
 
-        for (k = idx; k < rv.length; k++) {
-            System.out.println(rv[k]);
+        while (idx < diff.length) {
+            System.out.println(diff[idx]);
+            idx++;
         }
-
     }
-
 }
