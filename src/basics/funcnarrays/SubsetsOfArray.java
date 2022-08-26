@@ -3,7 +3,6 @@ package basics.funcnarrays;
 import java.util.Scanner;
 
 public class SubsetsOfArray {
-    // Program to find all subsets of an array
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
@@ -15,22 +14,28 @@ public class SubsetsOfArray {
 
         scn.close();
 
+        subsets(arr);
+    }
+
+    public static void subsets(int[] arr) {
         int limit = (int) Math.pow(2, arr.length);
+        
         for (int i = 0; i < limit; i++) {
+            String subset = "";
             int temp = i;
-            String set = "";
+
             for (int j = arr.length - 1; j >= 0; j--) {
                 int rem = temp % 2;
                 temp /= 2;
 
-                if (rem == 0) {
-                    set = "-\t" + set;
-                } else {
-                    set = arr[j] + "\t" + set;
-                }
+                if (rem == 0)
+                    subset = "-\t" + subset;
+                else
+                    subset = arr[j] + "\t" + subset;
             }
 
-            System.out.println(set);
+            System.out.println(subset);
         }
     }
+
 }
