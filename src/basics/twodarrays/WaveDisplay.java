@@ -3,31 +3,46 @@ package basics.twodarrays;
 import java.util.Scanner;
 
 public class WaveDisplay {
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int r = scn.nextInt();
-        int c = scn.nextInt();
 
-        int[][] matrix = new int[r][c];
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix[row].length; col++) {
-                matrix[row][col] = scn.nextInt();
+    public static void waveDisplay(int[][] arr) {
+        int row = 0;
+        int col = 0;
+        boolean dir = true;
+
+        while (col < arr[0].length) {
+            if (dir) {
+                System.out.println(arr[row][col]);
+                row++;
+                if (row == arr.length) {
+                    dir = false;
+                    col++;
+                    row--;
+                }
+            } else {
+                System.out.println(arr[row][col]);
+                row--;
+                if (row == -1) {
+                    dir = true;
+                    col++;
+                    row++;
+                }
             }
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int rows = scn.nextInt();
+        int cols = scn.nextInt();
+        int[][] arr = new int[rows][cols];
+
+        for (int row = 0; row < rows; row++)
+            for (int col = 0; col < cols; col++)
+                arr[row][col] = scn.nextInt();
 
         scn.close();
 
-        for (int col = 0; col < matrix[0].length; col++) {
-            if (col % 2 == 0) {
-                for (int row = 0; row < matrix.length; row++) {
-                    System.out.println(matrix[row][col]);
-                }
-            } else {
-                for (int row = matrix.length - 1; row >= 0; row--) {
-                    System.out.println(matrix[row][col]);
-                }
-            }
-        }
+        waveDisplay(arr);
     }
 
 }
