@@ -8,22 +8,16 @@ public class DiagonalTraversal {
         int n = scn.nextInt();
         int[][] matrix = new int[n][n];
 
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix[0].length; col++) {
+        for (int row = 0; row < matrix.length; row++)
+            for (int col = 0; col < matrix[0].length; col++)
                 matrix[row][col] = scn.nextInt();
-            }
-        }
 
         scn.close();
 
-        int i = 0;
+        for (int row = 0; row < matrix.length; row++) {
+            for (int rowCounter = 0, col = row; col < matrix[0].length; col++, rowCounter++)
+                System.out.println(matrix[rowCounter][col]);
 
-        while (i < matrix.length) {
-            for (int row = 0, col = i; row < matrix.length - i; row++, col++) {
-                System.out.println(matrix[row][col]);
-            }
-
-            i++;
         }
     }
 
