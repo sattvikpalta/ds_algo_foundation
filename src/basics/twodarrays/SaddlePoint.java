@@ -16,24 +16,22 @@ public class SaddlePoint {
 
         scn.close();
 
-        for (int k = 0; k < matrix.length; k++) {
-            int smallestColIdx = 0;
-            for (int col = 1; col < matrix[k].length; col++) {
-                if (matrix[k][col] < matrix[k][smallestColIdx]) {
-                    smallestColIdx = col;
-                }
-            }
+        for (int row = 0; row < matrix.length; row++) {
+            int leastValIdx = 0;
+            for (int col = 1; col < matrix[0].length; col++)
+                if (matrix[row][col] < matrix[row][leastValIdx])
+                    leastValIdx = col;
 
             boolean flag = true;
-            for (int row = 0; row < matrix.length; row++) {
-                if (matrix[row][smallestColIdx] > matrix[k][smallestColIdx]) {
+            for (int rowCounter = 0; rowCounter < matrix.length; rowCounter++) {
+                if (matrix[rowCounter][leastValIdx] > matrix[row][leastValIdx]) {
                     flag = false;
                     break;
                 }
             }
 
-            if (flag == true) {
-                System.out.println(matrix[k][smallestColIdx]);
+            if (flag) {
+                System.out.println(matrix[row][leastValIdx]);
                 return;
             }
         }
