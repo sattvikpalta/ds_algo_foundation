@@ -4,17 +4,15 @@ import java.util.Scanner;
 
 public class ToggleCase {
     public static String toggleCase(String str) {
-        StringBuilder sb = new StringBuilder("");
-
+        String resultStr = "";
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) >= 'a' && str.charAt(i) <= 'z') {
-                sb.append((char)(str.charAt(i) + 'A' - 'a'));
-            } else {
-                sb.append((char)(str.charAt(i) + 'a' - 'A'));
-            }
+            if (str.charAt(i) >= 'a' && str.charAt(i) < 'z')
+                resultStr += (char) (str.charAt(i) - 'a' + 'A');
+            else
+                resultStr += (char) (str.charAt(i) - 'A' + 'a');
         }
 
-        return sb.toString();
+        return resultStr;
     }
 
     public static void main(String[] args) {

@@ -4,40 +4,33 @@ import java.util.Scanner;
 
 public class StringCompression {
     public static String compression1(String str) {
-        String s = str.charAt(0) + "";
+        String resultStr = "" + str.charAt(0);
+        for (int prevIdx = 0, currIdx = 1; currIdx < str.length(); prevIdx++, currIdx++)
+            if (str.charAt(currIdx) != str.charAt(prevIdx))
+                resultStr += str.charAt(currIdx);
 
-        for (int i = 1; i < str.length(); i++) {
-            if (str.charAt(i) != str.charAt(i - 1)) {
-                s += str.charAt(i);
-            }
-        }
-
-        return s;
+        return resultStr;
     }
 
     public static String compression2(String str) {
-        String s = str.charAt(0) + "";
+        String resultStr = "" + str.charAt(0);
         int count = 1;
-
-        for (int i = 1; i < str.length(); i++) {
-            if (str.charAt(i) == str.charAt(i - 1)) {
-                count++;
-            } else {
+        for (int prevIdx = 0, currIdx = 1; currIdx < str.length(); prevIdx++, currIdx++) {
+            if (str.charAt(currIdx) != str.charAt(prevIdx)) {
                 if (count > 1) {
-                    s += count;
+                    resultStr += count;
                     count = 1;
                 }
-
-                s += str.charAt(i);
+                resultStr += str.charAt(currIdx);
+            } else {
+                count++;
             }
         }
 
-        if (count > 1) {
-            s += count;
-            count = 1;
-        }
+        if (count > 1)
+            resultStr += count;
 
-        return s;
+        return resultStr;
     }
 
     public static void main(String[] args) {
