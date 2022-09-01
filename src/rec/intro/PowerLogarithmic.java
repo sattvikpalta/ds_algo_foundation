@@ -5,26 +5,23 @@ import java.util.Scanner;
 public class PowerLogarithmic {
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
-        int x = scn.nextInt();
-        int n = scn.nextInt();
+        int num = scn.nextInt();
+        int pow = scn.nextInt();
         scn.close();
 
-        System.out.println(power(x, n));
+        System.out.println(power(num, pow));
     }
 
-    public static int power(int x, int n) {
-        if (n == 0) {
+    public static int power(int num, int pow) {
+        if (pow == 0)
             return 1;
-        }
 
-        int xpnb2 = power(x, n / 2);
-        int xpn = xpnb2 * xpnb2;
+        int result = power(num, pow / 2) * power(num, pow / 2);
 
-        if (n % 2 == 1) {
-            xpn *= x;
-        }
-
-        return xpn;
+        if (pow % 2 == 1)
+            return result * num;
+        else
+            return result;
     }
 
 }
