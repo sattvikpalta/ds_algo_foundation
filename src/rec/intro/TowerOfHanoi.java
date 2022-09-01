@@ -5,23 +5,22 @@ import java.util.Scanner;
 public class TowerOfHanoi {
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
-        int t1id = scn.nextInt();
-        int t2id = scn.nextInt();
-        int t3id = scn.nextInt();
+        int num = scn.nextInt();
+        int tower1 = scn.nextInt();
+        int tower2 = scn.nextInt();
+        int tower3 = scn.nextInt();
         scn.close();
 
-        toh(n, t1id, t2id, t3id);
+        toh(num, tower1, tower2, tower3);
     }
 
-    public static void toh(int n, int t1id, int t2id, int t3id) {
-        if (n == 0) {
+    public static void toh(int num, int tower1, int tower2, int tower3) {
+        if (num == 0)
             return;
-        }
 
-        toh(n - 1, t1id, t3id, t2id);
-        System.out.println(n + "[" + t1id + " -> " + +t2id + "]");
-        toh(n - 1, t3id, t2id, t1id);
+        toh(num - 1, tower1, tower3, tower2);
+        System.out.println(num + "[" + tower1 + " -> " + +tower2 + "]");
+        toh(num - 1, tower3, tower2, tower1);
     }
 
 }
