@@ -7,9 +7,8 @@ public class MaxArray {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int[] arr = new int[n];
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++)
             arr[i] = scn.nextInt();
-        }
 
         scn.close();
 
@@ -17,16 +16,14 @@ public class MaxArray {
     }
 
     public static int maxOfArray(int[] arr, int idx) {
-        if (idx == arr.length - 1) {
+        if (idx == arr.length - 1)
             return arr[idx];
-        }
 
-        int max = maxOfArray(arr, idx + 1);
-        if (max > arr[idx]) {
-            return max;
-        } else {
+        int maxOfSmallerArray = maxOfArray(arr, idx + 1);
+        if (maxOfSmallerArray > arr[idx])
+            return maxOfSmallerArray;
+        else
             return arr[idx];
-        }
     }
 
 }
