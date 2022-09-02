@@ -7,9 +7,8 @@ public class FirstIndex {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int[] arr = new int[n];
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++)
             arr[i] = scn.nextInt();
-        }
 
         int x = scn.nextInt();
         scn.close();
@@ -18,23 +17,13 @@ public class FirstIndex {
     }
 
     public static int firstIndex(int[] arr, int idx, int x) {
-        if (idx == arr.length) {
+        if (idx == arr.length)
             return -1;
-        }
 
-        // Inferior method
-        /*
-         * int fIdx = firstIndex(arr, idx + 1, x); if (arr[idx] == x) { return idx; }
-         * else { return fIdx; }
-         */
-
-        // Superior method
-        if (arr[idx] == x) {
+        if (arr[idx] == x)
             return idx;
-        } else {
-            int fIdx = firstIndex(arr, idx + 1, x);
-            return fIdx;
-        }
+        else
+            return firstIndex(arr, idx + 1, x);
     }
 
 }
