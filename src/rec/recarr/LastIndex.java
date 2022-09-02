@@ -7,9 +7,8 @@ public class LastIndex {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int[] arr = new int[n];
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++)
             arr[i] = scn.nextInt();
-        }
 
         int x = scn.nextInt();
         scn.close();
@@ -18,19 +17,17 @@ public class LastIndex {
     }
 
     public static int lastIndex(int[] arr, int idx, int x) {
-        if (idx == arr.length) {
+        if (idx == arr.length)
             return -1;
-        }
 
-        int lIdx = lastIndex(arr, idx + 1, x);
-        if (lIdx == -1) {
-            if (arr[idx] == x) {
-                return idx;
-            } else {
+        int secondLastIdx = lastIndex(arr, idx + 1, x);
+        if (secondLastIdx == -1)
+            if (arr[idx] == x)
+                return secondLastIdx;
+            else
                 return -1;
-            }
-        } else {
-            return lIdx;
-        }
+        else
+            return secondLastIdx;
     }
+
 }
